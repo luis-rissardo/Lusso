@@ -1,0 +1,657 @@
+/*font-family: 'Alumni Sans Pinstripe', sans-serif;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Grenze Gotisch', serif;
+font-family: 'Imperial Script', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quattrocento', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Space Mono', monospace;*/
+
+:root{
+    --background-color: black;
+    --font-color: white;
+    --header-color: rgba(132, 132, 132);
+    --select: red;
+}
+.modo-claro{
+    --background-color: rgb(229, 229, 229);
+    --font-color: black;
+    --header-color: rgb(201, 201, 201);
+    --select: greenyellow;
+}
+body{
+    margin: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: var(--background-color);
+    display: flex;
+    scroll-behavior: smooth both !important;
+    transition: .6s;
+    height: 500vh;
+}
+p , h1, h2, h3, h4, h5, h6{
+    color: var(--font-color);
+    transition: .6s;
+    font-family: 'Quattrocento',sans-serif;
+}
+::-webkit-scrollbar{
+    color: var(--font-color);
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--font-color);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--background-color);
+}
+::selection{
+    color: red;
+    background-color: var(--font-color);
+}
+header{
+    width: 100vw;
+    height: 4em;
+    position: fixed;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    z-index: 20;
+}
+nav{
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    transition: .6s;
+}
+nav:hover{
+    box-shadow: 0rem .2rem 3px var(--select);
+    background-color: var(--header-color);
+}
+.logotipo-nome{
+    display: flex;
+    margin: auto;
+}
+.logotipo-nome a{
+    margin: auto 0rem auto 3rem;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1.5rem;
+}
+.logotipo-nome a:hover{
+    cursor: pointer;
+}
+.logotipo-nome a span{
+    color: rgb(205, 29, 29);
+    
+}
+.logotipo{
+    width: 3rem;
+    height: 3rem;
+    margin: auto 0rem;
+    background-image: url(icons/helmet2.svg);
+    background-size: cover;
+    transition: .6s;
+}
+.logotipo:hover{
+    background-image: url(icons/helmet-color.svg);
+}
+body.modo-claro .logotipo{
+    background-image: url(icons/helmet1.svg);
+}
+body.modo-claro .logotipo:hover{
+    background-image: url(icons/helmet-color.svg);
+}
+.menu{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    -border: 1px green solid;
+    display: flex;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.menu ul li:last-child{
+    width: 8rem;
+}
+.menu ul li a{
+    color: var(--font-color);
+    text-decoration: none;
+    transition: .6s;
+}
+.menu ul li a.red{
+    padding: 1.5rem 1.3rem;
+}
+.menu ul li a.red:hover{
+    padding: 1.5rem 1.3rem;
+    background-color: var(--select);
+}
+#bcs{
+    margin-left: 1.5rem;
+}
+.claro{
+    padding: 5% 8%;
+    border: 2px solid;
+    border-image-slice: 1;
+}
+.claro:hover{
+    cursor: pointer;
+}
+.gradiente1{
+    border-image-source: linear-gradient(90deg, green, yellowgreen, greenyellow,  yellow);
+    transition: .6s;
+}
+.gradiente1:hover{
+    border-image-source: linear-gradient(90deg, #024089, #004da9, #fa814a, #fda300, #FFC619, #e1e3e7 );
+}
+.escuro a{
+    display: none;
+}
+.escuro.ativado{
+    display: flex;
+    align-items: center;
+}
+.escuro.ativado a{
+    display: block;
+    border: 2px solid;
+    border-image-slice: 2;
+    padding: 5% 8%;
+}
+.escuro.ativado:hover{
+    cursor: pointer;
+}
+.claro.ativado{
+    display: none;
+}
+@media (max-width: 1150px){
+    .menu ul{
+        gap: 1.5rem;
+    }
+}
+
+main{
+    width: 100vw;
+    height: fit-content;
+}
+#sectinicio{
+    background-image: url(img/pexels-anthony-duarte-18818776.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    transition: .6s;
+    display: flex;
+    align-items: center;
+}
+body.modo-claro #sectinicio{
+    background-image: url(img/pexels-jay-pizzle-3802510.jpg);
+}
+.divefeitosleftinicio{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+.divefeitosleftinicio img{
+    width: 18%;
+    height: 7%;
+    margin: 0rem 0rem 2rem 5rem;
+    opacity: .7;
+    transition: .6s;
+}
+.divefeitosleftinicio h2{
+    margin-bottom: 1.8rem;
+    margin-left: 1rem;
+    opacity: .7;
+    transition: .6s;
+}
+.divefeitosleftinicio h2:hover{
+    opacity: 1;
+    cursor: default;
+}
+.divefeitosleftinicio img:hover{
+    opacity: 1;
+}
+.claro2{
+    display: none;
+}
+.claro2.ativado{
+    display: block;
+    color: white;
+}
+.escuro2{
+    font-family: 'Quattrocento', serif;
+}
+.escuro2.ativado{
+    display: none;
+}
+.divtitleinicio{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin: 0rem 50rem 0rem 18rem;
+}
+.divtitleinicio h1:hover, .divtitleinicio hr:hover, .divtitleinicio h5:hover, .divtitleinicio p:hover{
+    cursor: default;
+}
+.divtitleinicio h1{
+    font-size: 10rem;
+    margin-bottom: -.5rem;
+    margin-top: -.5rem;
+    color: red;
+    text-shadow: 2px 2px 3px white;
+    font-family: 'Space-mono', monospace;
+}
+.divtitleinicio hr{
+    width: 50%;
+    color: aliceblue;
+    transition: .6s;
+}
+.divtitleinicio h5{
+    color: white;
+    font-size: 2.5rem;
+    margin-top: -.01rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .5rem;
+    text-shadow: 2px 2px 2px red;
+}
+.divtitleinicio p{
+    margin-top: 20%;
+    margin-bottom: -20%;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    text-shadow: 3px 3px 3px red;
+    transition: .6s;
+}
+.desap.scroll{
+    opacity: 0;
+}
+#h1inicio.scroll{
+    opacity: 0;
+    transform: translateY(-5rem);
+    color: white;
+}
+#linhainicio.scroll{
+    opacity: 0;
+    transform: translateY(-5rem);
+    border-color: greenyellow;
+}
+#h5inicio.scroll{
+    opacity: 0;
+    transform: translateY(-5rem);
+    color: #004da9;
+}
+body.modo-claro #sectjobs1{
+    background-image: linear-gradient(180deg, white, white, white, white,  steelblue);
+}
+#sectjobs1{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(180deg, rgb(23, 23, 23), black, black, black, indigo);
+    transition: .6s;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.divtitlejobs1{
+    width: 100%;
+    height: 20%;
+    margin-top: 2%;
+   -border: 1px red solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12rem;
+}
+.divtitlejobs1 h1{
+    font-size: 3rem;
+    font-family: 'Quattrocento', serif;
+    transition: .6s;
+}   
+.divtitlejobs1 h1:hover{
+    letter-spacing: 1.2rem;
+    cursor: default;
+}
+.divtitlejobs1 h1:hover span{
+    color: red;
+}
+.divtitlejobs1 hr{
+    width: 70%;
+    transition: .6s;
+    border-color: aliceblue;
+}
+.divtitlejobs1:hover hr{
+    border-color: red;
+}
+.divdescription{
+    -border: 1px greenyellow solid;
+    margin-top: -15%;
+    height: 35%;
+    width: 49%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+.divdescription:hover{
+    background-color: rgba(116, 116, 116, 0.418);
+    border-top-right-radius: 50px;
+    margin-left: 2px;
+    box-shadow: -1.5px 3px 3px greenyellow;
+}
+.divdescription:hover span.a{
+    animation: animacaopa 2s ease-in-out;
+}
+.divdescription:hover span.b{
+    animation: animacaopb 3s ease-in-out;
+}
+.divdescription:hover span.c{
+    animation: animacaopc 5s ease-in-out;
+}
+span.a, span.b, span.c{
+    transition: .6s;
+}
+.divdescription span img{
+    width: 6vw !important;
+    height: 8%;
+    margin-left: 2rem;
+    -border: 1px red solid;
+}
+.divdescription p{
+    word-wrap: break-word;
+    padding-right: 2rem;
+}
+.iconclaro{
+    display: none;
+}
+.iconclaro.ativado{
+    display: block;
+}
+.icondark.ativado{
+    display: none;
+}
+.iconclaro2{
+    display: none;
+}
+.iconclaro2.ativado{
+    display: block;
+}
+.icondark2.ativado{
+    display: none;
+}
+.divdescription2{
+    margin-top: -15%;
+    height: 35%;
+    width: 49%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+.divdescription2:hover{
+    background-color: rgba(116, 116, 116, 0.418);
+    border-top-left-radius: 50px;
+    box-shadow: 1.5px 3px 3px greenyellow;
+}
+.divdescription2 span img{
+    width: 6vw !important;
+    height: 8%;
+    margin-left: 2rem;
+    -border: 1px red solid;
+}
+.divdescription2 p{
+    word-wrap: break-word;
+    padding-right: 2rem;
+}
+.divdescription3{
+    -border: 1px greenyellow solid;
+    height: 35%;
+    width: 49%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+.divdescription3:hover{
+    background-color: rgba(116, 116, 116, 0.418);
+    border-bottom-right-radius: 50px;
+    margin-left: 2px;
+    box-shadow: -1.5px 3px 3px greenyellow;
+}
+.divdescription3 span img{
+    width: 6vw !important;
+    height: 8%;
+    margin-left: 2rem;
+    -border: 1px red solid;
+}
+.divdescription3 p{
+    word-wrap: break-word;
+    padding-right: 2rem;
+}
+.iconclaro3{
+    display: none;
+}
+.iconclaro3.ativado{
+    display: block;
+}
+.icondark3.ativado{
+    display: none;
+}
+.divdescription4{
+    height: 35%;
+    width: 49%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+.divdescription4:hover{
+    background-color: rgba(116, 116, 116, 0.418);
+    border-bottom-left-radius: 50px;
+    box-shadow: 1.5px 3px 3px greenyellow;
+}
+.divdescription4 span img{
+    width: 6vw !important;
+    height: 8%;
+    margin-left: 2rem;
+    -border: 1px red solid;
+}
+.divdescription4 p{
+    word-wrap: break-word;
+    padding-right: 2rem;
+}
+.divdescription4 p span{
+    font-weight: bolder;
+    color: greenyellow;
+    transition: .5s;
+}
+body.modo-claro .divdescription4 p span{
+    color: blue;
+}
+.iconclaro4{
+    display: none;
+}
+.iconclaro4.ativado{
+    display: block;
+}
+.icondark4.ativado{
+    display: none;
+}
+
+#sectslides{
+    float: none;
+    padding-top: 2%;
+    background-image: linear-gradient(180deg, indigo, black);
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    -border: 1px red solid;
+    overflow: hidden;
+    transition: .6s;
+}
+body.modo-claro #sectslides{
+    background-image: linear-gradient(180deg, steelblue, white);
+}
+.slideshow-container {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}  
+.mySlides {
+    display: none;
+    transition: .5s;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}  
+.text {
+    color: #f2f2f2;
+    font-size: 28px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 2px black;
+} 
+.numbertext {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10%;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: .4s;
+}  
+
+#sectdescriptionslides{
+    width: 100vw;
+    height: 120vh;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', serif;
+}
+.divtitledesc{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -border: 2px red solid;
+}
+.divtitledesc h1{
+    font-family: "Spacemono", monospace;
+    font-size: 1.5rem;
+}
+.desc{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 1%;
+    border: 1px var(--font-color) solid;
+    width: 49vw;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    transition: .6s ;
+    z-index: 10;
+    background-color: transparent;
+}
+.desc.aumentado{
+    border: 0px;
+    margin-left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/lamborghini-wallpaper.jpeg);
+    background-repeat: no-repeat;
+    align-items: normal;
+    justify-content: left;
+    transition: .6s;
+}
+.desc.aumentado .tit-logo-carro{
+    font-size: 15px;
+    height: 10%;
+    width: 25%;
+    -border: 1px red solid;
+    align-items: center;
+    margin: 3%;
+}
+.desc.aumentado .tit-logo-carro img{
+    width: 20%;
+}
+.tit-logo-carro{
+    display: flex;
+    font-family: 'Imperial Script', cursive;
+    transition: .6s;
+}
+
+
+
+.fadein{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all .6s ;
+}
+.fadein.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+@keyframes animacaopa{
+    0%{color: var(--font-color);}
+    50%{color: blueviolet;}
+    100%{color: var(--font-color);}
+}
+@keyframes animacaopb{
+    0%{color: var(--font-color);}
+    50%{color: tomato;}
+    100%{color: var(--font-color);}
+}
+@keyframes animacaopc{
+    0%{color: var(--font-color);}
+    50%{color: magenta;}
+    100%{color: var(--font-color);}
+}
+@keyframes fade {
+    from {transform: translateX(100vw); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+  }
