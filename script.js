@@ -17,11 +17,7 @@ let icondark3 = document.querySelector('.icondark3')
 let iconclaro3 = document.querySelector('.iconclaro3')
 let icondark4 = document.querySelector('.icondark4')
 let iconclaro4 = document.querySelector('.iconclaro4')
-let descaumenta = document.getElementById('descaumenta')
 
-descaumenta.addEventListener('click', ()=>{
-  descaumenta.classList.toggle('aumentado')
-})
 dk.addEventListener('click', ()=>{
     body.classList.toggle('modo-claro')
     txtdark.classList.toggle('ativado')

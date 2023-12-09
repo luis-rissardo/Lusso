@@ -19,6 +19,9 @@ font-family: 'Space Mono', monospace;*/
     --header-color: rgb(201, 201, 201);
     --select: greenyellow;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     width: 100%;
@@ -30,7 +33,6 @@ body{
     display: flex;
     scroll-behavior: smooth both !important;
     transition: .6s;
-    height: 500vh;
 }
 p , h1, h2, h3, h4, h5, h6{
     color: var(--font-color);
@@ -107,7 +109,6 @@ body.modo-claro .logotipo:hover{
     background-image: url(icons/helmet-color.svg);
 }
 .menu{
-    margin: auto;
     width: 60%;
     height: 100%;
     -border: 1px green solid;
